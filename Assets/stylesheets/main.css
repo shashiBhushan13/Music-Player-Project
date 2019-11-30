@@ -1,0 +1,748 @@
+* {
+    box-sizing: border-box;
+    /* padding : 0px; */
+}
+body {
+    background-color : black;
+    /* animation : anim_1 20s infinite; */
+    /* background-image : url("Images/Instagram.jpg") */
+    /* font-family: 'Montserrat', sans-serif; */
+    /* overflow: hidden; */
+}
+
+#playlist {
+    top : 0px;
+    width : 100%;
+    height: 60px;
+    padding :6px 40px;
+    margin: 0px 0px;
+    /* background-color : #0ab85e; */
+    /* position: absolute; */
+    position: fixed;
+    z-index:100;
+    background-color : rgba(0,0,0,0.45);
+}
+i {
+    cursor :pointer;
+}
+#backplay,#play,#forwardplay {
+    display: inline-block;
+    margin:0px 10px;
+}
+#pause {
+    display: inline-block;
+    margin :0px 5px;
+}
+.flex {
+    display: flex;
+}
+#backplay i{
+    transform: rotateY(180deg);
+    font-size : 1.8em;
+    border-right: 2px solid #f0582f;
+    color : #f0582f;
+    margin-top :10px;
+    
+}
+#forwardplay i{
+    font-size : 1.8em;
+    border-right : 2px solid #8319b1;
+    margin-top :10px;
+    color : #8319b1;
+}
+#play i{
+    font-size : 3em;
+    color :#dd244e;
+}
+#pause i {
+    font-size : 3em;
+    /* padding : 20px; */
+    /* margin-top : 20px; */
+    /* padding-top : 10px; */
+    color : #b5167d;
+}
+#songplayeds {
+    width : 100%;
+    height : 20px;
+    position: relative;
+}
+#songplayed {
+    background-color :white;
+    width : 70%;
+    margin-top : 20px;
+    margin-left : 50px;
+    margin-right : 100px;
+    height : 2px;
+    display: inline-block;
+    cursor : pointer;
+}
+#audio {
+    display:none;
+}
+.designadded {
+    margin-left : 50px;
+    color : whitesmoke;
+    font-weight: 600;
+}
+.designplay {
+    color : white;
+    width : 100%;
+    font-size:3em;
+}
+#songfinished {
+    background-color :rgb(40, 167, 69);
+    height : 2px;
+    display: block;
+    position: absolute;
+    /* width : 50%; */
+    top : 100%;
+    left : 5.2%;
+    cursor :pointer;
+}
+ul li {
+    list-style: none;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width : 100%;
+    margin : 10px 0px;
+    outline : none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+    background-color : white;
+    width : 100%;
+    height : 2px;
+}
+input[type="range"]::-webkit-slider-thumb {
+    border-radius : 50%;
+    /* border : 1px solid black; */
+    width : 25px;
+    height : 25px;
+    -webkit-appearance: none;
+    margin-top : -10px;
+    box-shadow: 1px 1px 10px #8319b1, 0px 0px 10px #8319b1;
+    background : #dd244e;
+    /* box-shadow: 1px 1px 10px 0px white; */
+}
+#volume {
+    color : white;
+    transition-duration : 0.4s;
+}
+#search {
+    padding : 10px 10px;
+    border : none;
+    position: relative;
+    width : 83%;
+}
+#search input {
+    width :100%;
+    border:1px solid black;
+    border-radius : 60px;
+    padding : 10px 55px;
+    /* display :inline; */
+}
+#search input:focus {
+    outline : none;
+}
+#or {
+    width : 5%;
+    /* margin : 0px; */
+    /* background-color : black; */
+    text-align : center;
+    color:white;
+    /* border-radius : 50%; */
+    padding : 18px 10px;
+    margin-left : 1.2%;
+}
+#surpriseme {
+    width : 12%;
+}
+.searchbar {
+    margin : 0px 2px;
+    margin-top : 27px;
+   padding-top : 3%;
+}
+#searchicon {
+    position: absolute;
+    top : 21px;
+    left : 30px;
+}
+#surpriseme button {
+    color : white;
+    background-color : #0ab85e;
+    border : none;
+    font-size : 0.9em;
+    padding : 10px 10px;
+    margin-left: 18px;
+    margin-top : 10px;
+    border-radius : 6px;
+    transition-duration : 0.4s;
+    cursor : pointer;
+}
+#surpriseme button:hover {
+    background-color : #71c43f;
+    color : white;
+}
+/* ----------------------WEEKLY TOP 15------------------------------------------- */
+.weekly {
+    padding : 10px 20px;
+    font-size : 1.2em;
+    color : grey;
+    text-align: center;
+    margin-left : 10px;
+}
+.aside1{
+    background-color : white;
+    margin-left : 8px;
+}
+#sidebar11 {
+    position: sticky;
+    top : 60px;
+}
+#songs .playall{
+    vertical-align: top;
+    margin-left : 8px;
+    margin-top : 8px;
+    margin-right : 10px;
+    font-size : 0.8rem;
+    text-align : center;
+    border-radius : 20px;
+}
+#songs ul {
+    position: relative;
+}
+#songs ul li {
+    cursor: pointer;
+    color :black;
+    /* background-color : white; */
+    margin-bottom : 8px;
+    /* border-radius : 10px; */
+    /* text-align : center; */
+    padding : 5px 0px;
+    transition-duration: 0.4s;
+    /* display: block; */
+    position: relative;
+}
+#songs ul li:hover {
+    color : rgb(40, 167, 69);
+}
+#songs1 {
+    width : 100%;
+}
+.setdesignplaybtnimg {
+    position: absolute;
+    width : 9%;
+    /* left : 1%; */
+    top : 6.5px;
+}
+.songmovienameweekly {
+    display: block;
+    color: grey;
+    font-size : 0.9em;
+}
+.songimage {
+    position: absolute;
+    right : 22px;
+    border-radius : 50%;
+    top : 0px;
+}
+
+.sidebar1 {
+    margin-right : 0px;
+}
+.maincontent {
+    margin : 0px;
+}
+.coldiv {
+    width : 25%;
+    margin-right : 8px;
+    overflow : hidden;
+}
+.coldiv img {
+    width : 100%;
+}
+#col_1 {
+    padding-left : 15px;
+}
+#centerelement {
+    margin : 0px;
+    padding:  0px;
+    overflow: hidden;
+    /* width : 500px;
+    height : 700px; */
+
+}
+.columnimage {
+    margin-right : 15px;
+    border : 1px solid whitesmoke;
+    transform: scale(1,1) rotate(0deg);
+    transition-duration: 0.5s;
+    cursor: pointer;
+    /* border-radius : 50%; */
+}
+.columnimage:hover {
+    transform: scale(1.5,1.5) rotate(360deg);
+    /* border-radius : 50%; */
+}
+
+#centerelement ul {
+    margin : 0px;
+    padding : 0px;
+    margin-left : 10px;
+    margin-bottom : 25px;
+    /* padding: 0px 15px; */
+}
+.designcolnames {
+    font-size: 0.85em;
+    text-align : center;
+    color : whitesmoke;
+    position: relative;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+.designcolnames:hover {
+    color : #0ab85e;
+}
+.designsinger {
+    color : grey;
+    font-size : 0.8em;
+    text-align : center;
+    cursor : pointer;
+    transition-duration: 0.5s;
+    /* font-weight : bold; */
+}
+.designsinger:hover {
+    color: white;
+}
+.aside2 {
+    background-color: white;
+    padding-top : 3px;
+    margin-left : 10px;
+    padding : 0px 10px;
+}
+.aside2 button {
+    vertical-align: top;
+    margin-top : 6px;
+    /* margin : 6px 15px; */
+    margin-right : 0px;
+    font-size : 0.8rem;
+    text-align : center;
+    border-radius : 20px;
+    display : none;
+}
+.imageright {
+    width : 90%;
+    margin : 0 auto;
+    border-radius : 20px;
+}
+.imagerightheading {
+    text-align : left;
+    font-size:  0.9rem;
+    transition-duration: 0.4s;
+    cursor:pointer;
+    margin-left : 10px;
+}
+.imagerightheading:hover {
+    color :#71c43f;
+}
+.imagerightpara {
+    font-size : 0.8rem;
+    color : grey;
+    margin-top : 0px;
+    padding-top : 0px;
+    margin-left : 12px;
+}
+#sidebar2{
+    position: sticky;
+    top:60px;
+    /* width : 80%; */
+}
+
+@media(max-width : 1326px) 
+{
+    .aside2 button {
+        vertical-align: top;
+        margin-top : 6px;
+        /* margin : 6px 15px; */
+        margin-right : 4px;
+        font-size : 0.6rem;
+        text-align : center;
+        border-radius : 20px;
+    }
+}
+
+@media(max-width : 1280px) 
+{
+    #songfinished {
+        left : 5.70%;
+    }
+}
+@media(max-width : 1200px) 
+{
+    #songfinished {
+        left : 6.19%;
+    }
+    .weekly1 {
+        margin-left :37%;
+    }
+    .imagerightheading {
+        text-align : center;
+        font-size : 1.0em;
+    }
+    .imagerightpara {
+        text-align : center;
+        font-size : 1.0em;
+    }
+    .setdesignplaybtnimg {
+        position: absolute;
+        width : 3%;
+        /* left : 
+        1%; */
+        top : 0.5px;
+    }
+    #songs1 {
+        padding-bottom: 20px;
+    }
+    #centerelement {
+        margin-top : 30px;
+        padding:  0px;
+        overflow: hidden;
+        /* width : 500px;
+        height : 700px; */
+    }
+    #featuresongs div {
+        display : block;
+    }
+    #featuresongs img {
+        max-width : 50%;
+        margin-left : 25%;
+        /* max-height : 400px; */
+        margin-bottom : 10px;
+    }
+    .aside2 button {
+        display : inline;
+    }
+    #surpriseme button {
+        color : white;
+        background-color : #0ab85e;
+        border : none;
+        font-size : 0.9em;
+        padding : 10px 10px;
+        margin-left: 5px;
+        margin-top : 10px;
+        border-radius : 6px;
+        transition-duration : 0.4s;
+        cursor : pointer;
+    }
+
+}
+@media(max-width : 1024px) 
+{
+    #songfinished {
+        left : 7.72%;
+    }
+}
+@media(max-width : 992px) 
+{
+    #songfinished {
+        left : 8.1%;
+    }
+    #search {
+        padding : 10px 10px;
+        border : none;
+        position: relative;
+        width : 80%;
+    }
+    #search input {
+        width :100%;
+        border:1px solid black;
+        border-radius : 60px;
+        padding : 10px 40px;
+        /* display :inline; */
+    }
+    #or {
+        width : 5%;
+        /* margin : 0px; */
+        /* background-color : black; */
+        text-align : center;
+        color:white;
+        /* border-radius : 50%; */
+        padding : 18px 5px;
+        margin-left : 0%;
+    }
+    #surpriseme button {
+        color : white;
+        background-color : #0ab85e;
+        border : none;
+        font-size : 0.8em;
+        padding : 10px 10px;
+        margin-left: 0px;
+        margin-top : 10px;
+        border-radius : 6px;
+        transition-duration : 0.4s;
+        cursor : pointer;
+    }
+}
+@media(max-width : 823px) 
+{
+    #songfinished {
+        left : 10.9%;
+    }
+}
+@media(max-width : 768px) 
+{
+    #songfinished {
+        left : 12.4%;
+    }
+    .weekly1 {
+        margin-left : 30%;
+    }
+    #search {
+        padding : 10px 10px;
+        border : none;
+        position: relative;
+        width : 100%;
+    }
+    #or {
+        margin : 0 auto;
+    }
+    .more {
+        margin : 0px;
+    }
+    .setdesignplaybtnimg {
+        position: absolute;
+        width : 5%;
+        /* left : 
+        1%; */
+        top : 0.5px;
+    }
+    .searchbar {
+        margin-top : 50px;
+        display : block;
+    }
+    #surpriseme button {
+        color : white;
+        background-color : #0ab85e;
+        border : none;
+        font-size : 12px;
+        padding : 10px 10px;
+        margin-left: 0px;
+        margin-top : -5px;
+        border-radius : 6px;
+        transition-duration : 0.4s;
+        cursor : pointer;
+        margin-bottom : 20px;
+    }
+    #surpriseme {
+        margin : 0 auto;
+        margin-top : 0px;
+    }
+}
+@media(max-width : 736px) 
+{
+    #songfinished {
+        left : 13.3%;
+    }
+}
+@media(max-width : 734px) 
+{
+    #songfinished {
+        left : 13.4%;
+    }
+}
+@media(max-width : 728px) 
+{
+    #songfinished {
+        left : 13.9%;
+    }
+    #surpriseme button {
+        color : white;
+        background-color : #0ab85e;
+        border : none;
+        font-size : 10px;
+        padding : 10px 10px;
+        margin-left: 0px;
+        margin-top : -5px;
+        border-radius : 6px;
+        transition-duration : 0.4s;
+        cursor : pointer;
+        margin-bottom : 20px;
+    }
+}
+@media(max-width : 684px) 
+{
+    #songfinished {
+        left : 15.1%;
+    }
+}
+@media(max-width : 668px) {
+    #songfinished {
+        left : 15.8%;
+    }
+}
+@media(max-width : 640px) 
+{
+    #songfinished {
+        left : 17.3%;
+    }
+}
+@media(max-width: 608px) 
+{
+    .searchbar {
+        margin-top : 110px;
+    }
+    #songfinished {
+        left : 19%;
+    }
+    #playlist {
+        display : block;
+        height : 120px;
+    }
+    #playbtn {
+        margin : 0 28%;
+    }
+    #songplayeds {
+        margin-left :0%;
+    }
+    #songadded {
+        margin-top : 14px;
+    }
+}
+@media(max-width : 576px) 
+{
+    #songfinished {
+        left : 21.9%;
+    }
+    .weekly1 {
+        font-size : 15px;
+        margin-left : 24%;
+    }
+    .setdesignplaybtnimg {
+        position: absolute;
+        width : 7%;
+        /* left : 
+        1%; */
+        top : 0.5px;
+    }
+    #centerelement .coldiv {
+        width : 100%;
+    }
+    #centerelement .coldiv img {
+        max-width : 80%;
+        max-height : 350px;
+        
+    }
+    #centerelement ul {
+        display : block;
+        text-align : center;
+    }
+}
+@media(max-width : 568px) 
+{
+    #songfinished {
+        left : 10%;
+    }
+}
+@media(max-width : 480px) 
+{
+    #playbtn {
+        margin : 0 20%;
+    }
+    .weekly1 {
+        font-size : 14px;
+        margin-left : 18%;
+    }
+    .setdesignplaybtnimg {
+        position: absolute;
+        width : 9%;
+        /* left : 
+        1%; */
+        top : 0.5px;
+    }
+}
+@media(max-width : 414px) 
+{
+    #songfinished {
+        left : 14.8%;
+    }
+}
+@media(max-width : 411px) {
+    #songfinished {
+        left : 15.2%;
+    }
+}
+@media(max-width : 378px) 
+{
+    #songfinished {
+        left : 16.8%;
+    }
+    #playbtn {
+        margin : 0 12%;
+    }
+    ::-webkit-input-placeholder {
+        font-size : 0.75em;
+        text-align : center;
+    }
+}
+@media(max-width : 360px) 
+{
+    #songfinished {
+        left : 18.0%;
+    }
+}
+@media(max-width : 350px) 
+{
+    .setdesignplaybtnimg {
+        position: absolute;
+        width : 12%;
+        /* left : 
+        1%; */
+        top : 0.5px;
+    }
+    #songs li {
+        font-size : 0.85em;
+    }
+    .songmovienameweekly {
+        font-size : 0.8em;
+    }
+}
+@media(max-width : 348px) 
+{
+    .weekly1{
+        margin-left :8%;
+    }
+}
+@media(max-width : 338px) 
+{
+    .playall {
+        margin : 0px;
+    }
+    .weekly {
+        font-size : 1em;
+    }
+    .more {
+        font-size : 0.6rem !important;
+        padding:5px;
+        margin : 0px;
+        /* margin-right : 20px; */
+    }
+}
+@media(max-width : 320px) 
+{
+    #playbtn {
+        margin-left : 8px;
+    }
+    .weeklyl {
+        margin-left : 0%;
+    }
+    .weekly {
+        font-size : 0.9em;
+    }
+    .playall {
+        font-size : 10px !important;
+    }
+    #songfinished {
+        left : 21.0%;
+    }
+}
