@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Customized Playlist</title>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> -->
+    <link rel="icon" href="Assets/Images/icon.png">
+    <link rel="stylesheet" href="Assets/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/Bootstrap/js/bootstrap.min.js">
+    <link rel="stylesheet" href="Assets/Fonts/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="Assets/stylesheets/main.css">
+    <script src="songs.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="playlist" class="flex">
+        <div class="flex" id="playbtn">
+            <div>
+                <span id="backplay">
+                        <i class="fas fa-play"></i>
+                   </span>
+        </div>
+        <div>
+                <span id="play">
+                        <i class="fas fa-play" id="toggleplaypause"></i>
+                    </span>
+        </div>
+        <div>
+                <span id="pause">
+                        <i class="fas fa-pause"></i>
+                    </span>
+        </div>
+        <div>
+                <span id="forwardplay">
+                        <i class="fas fa-play"></i>
+                    </span>
+        </div>
+        </div>
+            <div id="songplayeds">
+                <audio id="audio">
+                    <source src="">
+                </audio>
+                <span id="songplayed"></span>
+                <span id="songfinished"></span>
+                <div id="songadded">
+                </div>
+            </div>
+            <div>
+                <input type="range" name="" id="range" min="0" max="100" value="100">
+            </div>
+        
+    </div>
+    <div class="flex searchbar">
+        <div id="search">
+            <input type="search" id="search" autofocus spellcheck="false" placeholder="Search for Bom Diggy, Tareefan, Buzz...">
+            <span id="searchicon">
+                <i class="fas fa-search"></i>
+            </span>
+        </div>
+        <div id="or">
+            <p>or</p>
+        </div>
+        <div id="surpriseme">
+            <button>Surprise Me!</button>
+        </div>
+    </div>
+    <div class="container-fluid maincontent row">
+    <div id="songs" class="col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12">
+        <div id="sidebar11">
+                <aside class="aside1">
+                        <h3 class="d-inline-block weekly">Weekly Top 15</h3>
+                        <span>
+                            <button class="btn btn-success playall">
+                                PLAY ALL
+                            </button>
+                        </span>
+                        <ul id="songs1">
+                    </ul>
+                    </aside>
+        </div>
+    </div>
+    <div class="col-xl-6  col-lg-12 col-md-12 col-sm-12 col-12">
+        <div id="centerelement">
+            <!-- <ul class="flex" id="col_1" class="col-xl-5 col-lg-5 col-md-5"> 
+            </ul> -->
+        </div>
+    </div>
+    <div class="songs2 col-xl-3 col-lg-12 col-md-12 col-sm-12 col-12">
+    <div id="sidebar2">
+        <aside class="aside2">
+                <h3 class="d-inline-block weekly weekly1">Featured Playlists</h3>
+                <span>
+                    <button class="btn btn-success playall more">
+                        MORE
+                    </button>
+                </span>
+                <div id="featuresongs">
+
+                </div>
+        </aside>
+    </div>
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+</body>
+</html>
